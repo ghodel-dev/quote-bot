@@ -8,5 +8,5 @@ Botu çalışdırmaq üçün:
 ```
 node index.js
 ```
-Bot işləsin deyə botun apisini qeyd etməlisiniz.
+Bot işləsin deyə botun tokenin "new Telegraf('')" olan yerdə dırnağın içində qeyd etməlisiniz.
 Əgər bu botu irəlilətəcəksinizsə api qovluğunu node_modules qovluğunun içinə əlavə edib, .json fayllarında eyni tərzdə əlavələr edin. İstəyən bota əlavələr edə bilər. Bunun üçün yuxarıda olan Fork düyməsinə basmaq kifayətdir.
