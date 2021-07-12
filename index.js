@@ -1,8 +1,8 @@
 const { Telegraf } = require('telegraf');
 /* Burada apidən aforizm, kitab, alıntı məlumatı çəkilir */
-const aforizm = require('api/aforizm.json');
-const kitab = require('api/books.json');
-const quote = require('api/quote.json');
+const aforizm = require('./api/aforizm.json');
+const kitab = require('./api/books.json');
+const quote = require('./api/quote.json');
 
 /* Burada d;rnaq içində bot tokenini yazın */
 const bot = new Telegraf('');
