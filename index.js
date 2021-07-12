@@ -4,8 +4,8 @@ const aforizm = require('api/aforizm.json');
 const kitab = require('api/books.json');
 const quote = require('api/quote.json');
 
-/* Buradaa "bot" yazılan yerə botunuzun tokenin yazın */
-const bot = new Telegraf('bot');
+/* Burada d;rnaq içində bot tokenini yazın */
+const bot = new Telegraf('');
 
 
 /* Burada bot başladıldıqda botun nə edəcəyi yazılıb */
