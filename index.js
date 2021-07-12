@@ -1,10 +1,14 @@
 const { Telegraf } = require('telegraf');
+/* Burada apidən aforizm, kitab, alıntı məlumatı çəkilir */
 const aforizm = require('api/aforizm.json');
 const kitab = require('api/books.json');
 const quote = require('api/quote.json');
 
-const bot = new Telegraf('1874568152:AAGV7cpWVgbTfPMG34YXzMLLzYHTSHp_w-4');
+/* Buradaa "bot" yazılan yerə botunuzun tokenin yazın */
+const bot = new Telegraf('bot');
 
+
+/* Burada bot başladıldıqda botun nə edəcəyi yazılıb */
 bot.start(ctx => {
     ctx.telegram.sendMessage(
         ctx.chat.id,
@@ -20,6 +24,7 @@ bot.start(ctx => {
     )
 });
 
+/* .command funksiyası hansı commandda botun nə etməli olduğunu bildirmək üçündür */
 bot.command('help', ctx => {
     bot.telegram.sendMessage(
         ctx.chat.id,
@@ -27,13 +32,11 @@ bot.command('help', ctx => {
     );
 });
 
-bot.command('yeni', ctx => {
-    var rnd = Math.floor(Math.random()* quote.length)
-    bot.telegram.sendMessage(
-        ctx.chat.id,
-        quote[rnd].quote
-    )
-})
+/*
+Emoji isletmek ucun: String.fromCodePoint(0x1F4D2);
+Emoji kodlari: 0x + Unicode Emoji kodu
+Məsələn: ${String.fromCodePoint(0x1F4C3)}Tərcümə: ${aforizm[random].tercume}
+*/
 
 bot.command('kitab', ctx => {
     var rand = Math.floor(Math.random() * kitab.length);
@@ -50,12 +53,6 @@ bot.command('alinti', ctx => {
         `${String.fromCodePoint(0x1F4D2)} Alıntı: ${quote[randm].quote}\n\n${String.fromCodePoint(0x2712)} Kitab: ${quote[randm].book}`
     )
 })
-
-/*
-Emoji isletmek ucun: String.fromCodePoint(0x1F4D2);
-Emoji kodlari: 0x + Unicode
-${String.fromCodePoint(0x1F4C3)}Tərcümə: ${aforizm[random].tercume}
-*/
 
 bot.command('aforizm', ctx => {
     var random = Math.floor(Math.random()*aforizm.length);
