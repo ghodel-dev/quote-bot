@@ -9,12 +9,6 @@
   "engines": {
     "node": "14.17.3"
   },
-  "contributors": [
-		{
-			"name": "Lucifer25x",
-			"url": "https://github.com/Lucifer25x"
-		},
-  ],
   "keywords": [],
   "author": "Lucifer25x",
   "license": "MIT",
